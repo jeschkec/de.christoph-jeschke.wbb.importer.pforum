@@ -1,0 +1,51 @@
+<?xml version='1.0' ?>
+<!-- Phing build script -->
+<project name='de.christoph-jeschke.wbb.importer.pforum' default='dist' basedir='.'>
+    <property name='Package.Source'         value='de.christoph-jeschke.wbb.importer.pforum' />
+    <property name='Package.Dir.Temp'       value="${Package.Source}.temp" />
+    <property name='Package.Dir.Files'      value="${Package.Source}/files" />
+    <property name='Package.Dir.Acp'        value="${Package.Source}/acptemplates" />
+    <property name='Package.File.Package'   value="package.xml" />
+
+    <target name='clean'>
+        <echo>Clean</echo>
+        <delete file="${Package.Source}/files.tar" failonerror='false' />
+        <delete file="${Package.Source}/acptemplates.tar" failonerror='false' />
+        <delete dir="${Package.Dir.Temp}" failonerror='false' />
+        <delete failonerror='false'>
+            <fileset dir="tmp">
+                <include name="package_*" />
+                <include name="acp*" />
+            </fileset>
+        </delete>
+    </target>
+
+    <target name='prepare' depends='clean'>
+        <echo>Create temporary directory</echo>
+        <mkdir dir="${Package.Dir.Temp}" />
+
+        <echo>Prepare sub packages</echo>
+        <tar destfile="${Package.Dir.Files}.tar" basedir="${Package.Dir.Files}" compression="none" />
+        <tar destfile="${Package.Dir.Acp}.tar"   basedir="${Package.Dir.Acp}" compression="none" />
+    </target>
+
+    <target name='build' depends='prepare'>
+        <echo>Copy files</echo>
+        <copy todir="${Package.Dir.Temp}">
+            <fileset dir="${Package.Source}">
+                <exclude name="package.xml" />
+                <include name="*.xml" />
+                <include name="*.tar" />
+            </fileset>
+        </copy>
+
+        <exec command="php -f ${Package.Source}/${Package.File.Package} > ${Package.Dir.Temp}/${Package.File.Package}" />
+    </target>
+
+    <target name='dist' depends='build'>
+        <delete file="${Package.Source}.tar" failonerror='false' />
+        <tar destfile="${Package.Source}.tar" basedir="${Package.Dir.Temp}" compression="none" />
+        <echo>Build complete</echo>
+        <phingcall target="clean" />
+    </target>
+</project>

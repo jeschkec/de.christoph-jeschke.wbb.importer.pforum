@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id$ -->
+<!DOCTYPE language SYSTEM "http://www.woltlab.com/DTDs/language.dtd">
+<language languagecode="de">
+	<category name="wbb.acp.importer">
+		<item name="wbb.acp.importer.pforum.configure.db.tablePrefix"><![CDATA[Präfix für Tabellen]]></item>
+		<item name="wbb.acp.importer.pforum.configure.db.tablePrefix.error.invalid"><![CDATA[Es wurde keine Datenbank-Tabelle mit diesem Tabellenpräfix gefunden.]]></item>
+		<item name="wbb.acp.importer.pforum"><![CDATA[Powie's Forum]]></item>
+		<item name="wbb.acp.importer.pforum.configure.source"><![CDATA[Daten-Quelle]]></item>
+		<item name="wbb.acp.importer.pforum.configure.source.path"><![CDATA[Verzeichnis der Quelle]]></item>
+		<item name="wbb.acp.importer.pforum.configure.source.path.error.invalid"><![CDATA[Unter dem angegebenen Pfad konnte keine  PForum-Installation gefunden werden.]]></item>
+	</category>
+</language>

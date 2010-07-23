@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<!DOCTYPE data SYSTEM "http://www.woltlab.com/DTDs/importsource.dtd">
+<data>
+	<import>
+		<source name="pforum">
+			<classpath>lib/system/importer/PforumExporter.class.php</classpath>
+			<template>importerConfigPforum</template>
+		</source>
+	</import>
+</data>
