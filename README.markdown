@@ -8,8 +8,8 @@ Use [Phing](http://phing.info/ "Phing Project") to build the necessary `tar` pac
 </pre>
 
 ### License
-Copyright (c) 2008 Christoph Jeschke <[tools@christoph-jeschke.de](mailto:tools@christoph-jeschke.de)>
-All rights reserved.
+<strong>Copyright (c) 2008 Christoph Jeschke <[tools@christoph-jeschke.de](mailto:tools@christoph-jeschke.de)>
+All rights reserved. </strong>
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
