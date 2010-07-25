@@ -5,10 +5,9 @@
  *  PHP Version 5.2.0
  *
  *  @category WBB
- *  @package  de.christoph-jeschke.wbb.importer.pforum
+ *  @package  De.christoph-jeschke.wbb.importer.pforum
  *  @author   Christoph Jeschke <tools@christoph-jeschke.de>
  *  @license  Copyright protected
- *  @version  $Id$
  *  @link     http://christoph-jeschke.de/
  */
 
@@ -18,7 +17,7 @@ require_once WBB_DIR.'lib/system/importer/Exporter.class.php';
  *  Powie's Forum Exporter Class
  *
  *  @category WBB
- *  @package  de.christoph-jeschke.wbb.importer.pforum
+ *  @package  De.christoph-jeschke.wbb.importer.pforum
  *  @author   Christoph Jeschke <tools@christoph-jeschke.de>
  *  @license  Copyright protected
  *  @link     http://christoph-jeschke.de/

@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
-<!-- $Id$ -->
 <!DOCTYPE package SYSTEM "http://www.woltlab.com/DTDs/package.dtd">
-<package name="de.cj-soft.wbb.importer.pforum">
+<package name="De.cj-soft.wbb.importer.pforum">
 	<packageinformation>
 		<packagename>Powie's Forum Converter</packagename>
 		<plugin>com.woltlab.wbb</plugin>
-		<version>$Id$</version>
+		<version>%%VERSION%%</version>
 		<date><?php echo date('Y-m-d'); ?></date>
 	</packageinformation>
 

@@ -6,6 +6,7 @@
     <property name='Package.Dir.Files'      value="${Package.Source}/files" />
     <property name='Package.Dir.Acp'        value="${Package.Source}/acptemplates" />
     <property name='Package.File.Package'   value="package.xml" />
+    <property name='Package.Version'        value="1.0.0" />
 
     <target name='clean'>
         <echo>Clean</echo>
@@ -40,6 +41,7 @@
         </copy>
 
         <exec command="php -f ${Package.Source}/${Package.File.Package} > ${Package.Dir.Temp}/${Package.File.Package}" />
+        <exec command="perl -i -ne 's/%%VERSION%%/${Package.Version}/g; print;' ${Package.Dir.Temp}/${Package.File.Package}"/>
     </target>
 
     <target name='dist' depends='build'>
